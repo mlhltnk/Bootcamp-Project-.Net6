@@ -1,9 +1,9 @@
 ﻿using Business.Abstract;
-using Business.CCS;
 using Business.Constans;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using DataAccess.Concrete.InMemory;
@@ -36,13 +36,19 @@ namespace Business.Concrete
         public IResult Add(Product product)
         {//buraya iş kodları ve validasyon kodları yazılır. ürünü eklemeden önce kurallar varsa buraya yazarız
 
+            IResult result = BusinessRules.Run(CheckIfProductNameExist(product.ProductName), 
+                CheckIfProductCountOfCategoryCorrect(product.CategoryID));      //bunlar iş kuralları, params sayesinde aynı satırda yazabildik
 
-                _productDal.Add(product);
+            if(result != null) //kurala uymayan bir durum oluşmuşsa
+            {
+                return result;
+            }
+            _productDal.Add(product);
 
-                return new SuccessResult(Messages.ProductAdded);
-                //return new Result(true,"ürün eklendi");   //işlemin sonucu true ve ekrana ürün eklendi yazdırmak için;
-                //(true,ürün eklendi) bu kısmın construtor'ı Result.cs de oluşturuldu        
-         
+            return new SuccessResult(Messages.ProductAdded);
+            //return new Result(true,"ürün eklendi");   //işlemin sonucu true ve ekrana ürün eklendi yazdırmak için;
+            //(true,ürün eklendi) bu kısmın construtor'ı Result.cs de oluşturuldu   
+
         }
 
 
@@ -87,7 +93,52 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails());
         }
 
+        [ValidationAspect(typeof(ProductValidator))]
+        public IResult Update(Product product)
+        {
+            //bir kategoride en fazla 10 ürün olabilir
+            var result = _productDal.GetAll(p => p.CategoryID == product.CategoryID);           //kategorideki ürünleri verir
+            if (result.Count >= 10)
+            {
+                return new ErrorResult(Messages.ProductCountOfCategoryError);
+            }
+            throw new NotImplementedException();
+        }
+
+
+
+
+        //bir kategoride en fazla 10 ürün olabilir iş kuralı
+        //BİRDEN ÇOK YERDE KULLANILAN BİR İŞ KURALI OLDUĞU İÇİN BU ŞEKİLDE AYRI BİR METOT YAPTIK
+        private IResult CheckIfProductCountOfCategoryCorrect(int categoryid)   //kategorideki ürün sayısının kurallara uygunluğunu doğrula
+        {
+            //select count(*) from products where categoryıd=1 'in LINQ hali aşağıdaki
+            var result = _productDal.GetAll(p => p.CategoryID == categoryid);           //kategorideki ürünleri verir
+            if (result.Count >= 10)
+            {
+                return new ErrorResult(Messages.ProductCountOfCategoryError);
+            }
+            return new SuccessResult();
+        }
+
+
+
+        //Aynı isimde ürün eklenemesin iş kuralı
+        private IResult CheckIfProductNameExist(string productName)   
+        {
+
+            var result = _productDal.GetAll(p => p.ProductName == productName).Any();  //Any-->var mı? demektir. Yani bu şarta uyan data var mı demektir.        
+            if (result==true)
+            {
+                return new ErrorResult(Messages.ProductNameAlreadyExists);
+            }
+            return new SuccessResult();
+        }
+
+
 
         //geri kalan CRUD operasyonlarını yaz.
     }
+
+   
 }

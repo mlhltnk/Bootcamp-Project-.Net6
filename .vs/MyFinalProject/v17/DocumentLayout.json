@@ -3,36 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\core\\aspects\\autofac\\validation\\validationaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|solutionrelative:core\\aspects\\autofac\\validation\\validationaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\core\\utilities\\interceptors\\methodinterception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|solutionrelative:core\\utilities\\interceptors\\methodinterception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\core\\crosscuttingconcerns\\validation\\validationtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|solutionrelative:core\\crosscuttingconcerns\\validation\\validationtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\core\\utilities\\business\\businessrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|solutionrelative:core\\utilities\\business\\businessrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EBA26E7C-C6D8-4A50-92C7-9ADFEC3CD1E6}|Business\\Business.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\business\\concrete\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EBA26E7C-C6D8-4A50-92C7-9ADFEC3CD1E6}|Business\\Business.csproj|solutionrelative:business\\concrete\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\core\\utilities\\interceptors\\methodinterceptionbaseattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|solutionrelative:core\\utilities\\interceptors\\methodinterceptionbaseattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EBA26E7C-C6D8-4A50-92C7-9ADFEC3CD1E6}|Business\\Business.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\business\\abstract\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBA26E7C-C6D8-4A50-92C7-9ADFEC3CD1E6}|Business\\Business.csproj|solutionrelative:business\\abstract\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA39388E-2E60-4746-8123-96956CF0BA57}|WebAPI\\WebAPI.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA39388E-2E60-4746-8123-96956CF0BA57}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA39388E-2E60-4746-8123-96956CF0BA57}|WebAPI\\WebAPI.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA39388E-2E60-4746-8123-96956CF0BA57}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBA26E7C-C6D8-4A50-92C7-9ADFEC3CD1E6}|Business\\Business.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\business\\constans\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBA26E7C-C6D8-4A50-92C7-9ADFEC3CD1E6}|Business\\Business.csproj|solutionrelative:business\\constans\\messages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBA26E7C-C6D8-4A50-92C7-9ADFEC3CD1E6}|Business\\Business.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\business\\dependecyresolvers\\autofac\\autofacbusinessmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBA26E7C-C6D8-4A50-92C7-9ADFEC3CD1E6}|Business\\Business.csproj|solutionrelative:business\\dependecyresolvers\\autofac\\autofacbusinessmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\core\\utilities\\interceptors\\methodinterception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|solutionrelative:core\\utilities\\interceptors\\methodinterception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\core\\utilities\\interceptors\\aspectinterceptorselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|solutionrelative:core\\utilities\\interceptors\\aspectinterceptorselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EBA26E7C-C6D8-4A50-92C7-9ADFEC3CD1E6}|Business\\Business.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\business\\validationrules\\fluentvalidation\\productvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EBA26E7C-C6D8-4A50-92C7-9ADFEC3CD1E6}|Business\\Business.csproj|solutionrelative:business\\validationrules\\fluentvalidation\\productvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\core\\aspects\\autofac\\validation\\validationaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|solutionrelative:core\\aspects\\autofac\\validation\\validationaspect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EBA26E7C-C6D8-4A50-92C7-9ADFEC3CD1E6}|Business\\Business.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\business\\dependecyresolvers\\autofac\\autofacbusinessmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EBA26E7C-C6D8-4A50-92C7-9ADFEC3CD1E6}|Business\\Business.csproj|solutionrelative:business\\dependecyresolvers\\autofac\\autofacbusinessmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\core\\crosscuttingconcerns\\validation\\validationtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|solutionrelative:core\\crosscuttingconcerns\\validation\\validationtool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|c:\\users\\melih\\desktop\\edemirog2021.net6\\myfinalproject\\core\\utilities\\interceptors\\methodinterceptionbaseattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E46EB2E2-0DBF-460B-A3F6-1E5AC090C7A3}|Core\\Core.csproj|solutionrelative:core\\utilities\\interceptors\\methodinterceptionbaseattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,8 +58,47 @@
       "DocumentGroups": [
         {
           "DockedHeight": 617,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BusinessRules.cs",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Core\\Utilities\\Business\\BusinessRules.cs",
+              "RelativeDocumentMoniker": "Core\\Utilities\\Business\\BusinessRules.cs",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Core\\Utilities\\Business\\BusinessRules.cs",
+              "RelativeToolTip": "Core\\Utilities\\Business\\BusinessRules.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T13:22:59.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\WebAPI\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\WebAPI\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T13:02:39.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\Abstract\\IProductService.cs",
+              "RelativeDocumentMoniker": "Business\\Abstract\\IProductService.cs",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\Abstract\\IProductService.cs",
+              "RelativeToolTip": "Business\\Abstract\\IProductService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T11:40:00.198Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -51,6 +106,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ProductManager.cs",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\Concrete\\ProductManager.cs",
+              "RelativeDocumentMoniker": "Business\\Concrete\\ProductManager.cs",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\Concrete\\ProductManager.cs",
+              "RelativeToolTip": "Business\\Concrete\\ProductManager.cs",
+              "ViewState": "AQIAAHEAAAAAAAAAAAAuwH4AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T04:40:47.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\WebAPI\\Program.cs",
+              "RelativeToolTip": "WebAPI\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB8AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T13:04:06.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Messages.cs",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\Constans\\Messages.cs",
+              "RelativeDocumentMoniker": "Business\\Constans\\Messages.cs",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\Constans\\Messages.cs",
+              "RelativeToolTip": "Business\\Constans\\Messages.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxAAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T11:36:11.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "MethodInterception.cs",
               "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Core\\Utilities\\Interceptors\\MethodInterception.cs",
               "RelativeDocumentMoniker": "Core\\Utilities\\Interceptors\\MethodInterception.cs",
@@ -58,24 +152,25 @@
               "RelativeToolTip": "Core\\Utilities\\Interceptors\\MethodInterception.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T07:07:47.964Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ValidationAspect.cs",
-              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Core\\Aspects\\Autofac\\Validation\\ValidationAspect.cs",
-              "RelativeDocumentMoniker": "Core\\Aspects\\Autofac\\Validation\\ValidationAspect.cs",
-              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Core\\Aspects\\Autofac\\Validation\\ValidationAspect.cs",
-              "RelativeToolTip": "Core\\Aspects\\Autofac\\Validation\\ValidationAspect.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T07:10:00.579Z",
+              "WhenOpened": "2024-03-07T07:07:47.964Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
+              "Title": "AutofacBusinessModule.cs",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\DependecyResolvers\\Autofac\\AutofacBusinessModule.cs",
+              "RelativeDocumentMoniker": "Business\\DependecyResolvers\\Autofac\\AutofacBusinessModule.cs",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\DependecyResolvers\\Autofac\\AutofacBusinessModule.cs",
+              "RelativeToolTip": "Business\\DependecyResolvers\\Autofac\\AutofacBusinessModule.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T04:57:29.124Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AspectInterceptorSelector.cs",
               "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Core\\Utilities\\Interceptors\\AspectInterceptorSelector.cs",
               "RelativeDocumentMoniker": "Core\\Utilities\\Interceptors\\AspectInterceptorSelector.cs",
@@ -83,35 +178,25 @@
               "RelativeToolTip": "Core\\Utilities\\Interceptors\\AspectInterceptorSelector.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T07:50:26.158Z"
+              "WhenOpened": "2024-03-07T07:50:26.158Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductManager.cs",
-              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\Concrete\\ProductManager.cs",
-              "RelativeDocumentMoniker": "Business\\Concrete\\ProductManager.cs",
-              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\Concrete\\ProductManager.cs",
-              "RelativeToolTip": "Business\\Concrete\\ProductManager.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAQwBcAAAABAAAA",
+              "DocumentIndex": 9,
+              "Title": "ValidationAspect.cs",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Core\\Aspects\\Autofac\\Validation\\ValidationAspect.cs",
+              "RelativeDocumentMoniker": "Core\\Aspects\\Autofac\\Validation\\ValidationAspect.cs",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Core\\Aspects\\Autofac\\Validation\\ValidationAspect.cs",
+              "RelativeToolTip": "Core\\Aspects\\Autofac\\Validation\\ValidationAspect.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T04:40:47.548Z"
+              "WhenOpened": "2024-03-07T07:10:00.579Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MethodInterceptionBaseAttribute.cs",
-              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Core\\Utilities\\Interceptors\\MethodInterceptionBaseAttribute.cs",
-              "RelativeDocumentMoniker": "Core\\Utilities\\Interceptors\\MethodInterceptionBaseAttribute.cs",
-              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Core\\Utilities\\Interceptors\\MethodInterceptionBaseAttribute.cs",
-              "RelativeToolTip": "Core\\Utilities\\Interceptors\\MethodInterceptionBaseAttribute.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T07:50:32.47Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "ValidationTool.cs",
               "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Core\\CrossCuttingConcerns\\Validation\\ValidationTool.cs",
               "RelativeDocumentMoniker": "Core\\CrossCuttingConcerns\\Validation\\ValidationTool.cs",
@@ -123,27 +208,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ProductValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\ValidationRules\\FluentValidation\\ProductValidator.cs",
-              "RelativeDocumentMoniker": "Business\\ValidationRules\\FluentValidation\\ProductValidator.cs",
-              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\ValidationRules\\FluentValidation\\ProductValidator.cs",
-              "RelativeToolTip": "Business\\ValidationRules\\FluentValidation\\ProductValidator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAoAAAA",
+              "DocumentIndex": 11,
+              "Title": "MethodInterceptionBaseAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Core\\Utilities\\Interceptors\\MethodInterceptionBaseAttribute.cs",
+              "RelativeDocumentMoniker": "Core\\Utilities\\Interceptors\\MethodInterceptionBaseAttribute.cs",
+              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Core\\Utilities\\Interceptors\\MethodInterceptionBaseAttribute.cs",
+              "RelativeToolTip": "Core\\Utilities\\Interceptors\\MethodInterceptionBaseAttribute.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T07:42:07.518Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AutofacBusinessModule.cs",
-              "DocumentMoniker": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\DependecyResolvers\\Autofac\\AutofacBusinessModule.cs",
-              "RelativeDocumentMoniker": "Business\\DependecyResolvers\\Autofac\\AutofacBusinessModule.cs",
-              "ToolTip": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\DependecyResolvers\\Autofac\\AutofacBusinessModule.cs",
-              "RelativeToolTip": "Business\\DependecyResolvers\\Autofac\\AutofacBusinessModule.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABgAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T04:57:29.124Z"
+              "WhenOpened": "2024-03-07T07:50:32.47Z"
             }
           ]
         }

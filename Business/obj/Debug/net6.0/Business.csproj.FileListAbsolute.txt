@@ -34,3 +34,4 @@ C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\Business\obj\Debug\net6.
 C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\Business\obj\Debug\net6.0\Business.pdb
 C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\Business\obj\Debug\net6.0\ref\Business.dll
 C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\Business\obj\Debug\net6.0\Business.csproj.Up2Date
+C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\Business\obj\Debug\net6.0\Business.sourcelink.json

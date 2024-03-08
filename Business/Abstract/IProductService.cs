@@ -21,6 +21,8 @@ namespace Business.Abstract
 
         IResult Add(Product product);                                              //ürün ekleme  (bu void olduğu için bunu Iresult olarak bıraktık)
 
+        IResult Update(Product product);
+
         IDataResult<Product> GetById(int productId);                               //Id'ye göre tek bir ürün getir
 
         //geri kalan CRUD operasyonlarını yaz!!!

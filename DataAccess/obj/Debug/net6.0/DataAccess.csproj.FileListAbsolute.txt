@@ -32,3 +32,4 @@ C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\DataAccess\obj\Debug\net
 C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\DataAccess\obj\Debug\net6.0\DataAccess.pdb
 C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\DataAccess\obj\Debug\net6.0\ref\DataAccess.dll
 C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\DataAccess\obj\Debug\net6.0\DataAccess.csproj.Up2Date
+C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\DataAccess\obj\Debug\net6.0\DataAccess.sourcelink.json

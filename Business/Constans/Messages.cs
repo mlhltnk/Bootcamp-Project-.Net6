@@ -13,4 +13,6 @@ public static class Messages
     public static string ProductNameInvalid = "Ürün ismi Geçersiz";
     public static string MaintenanceTime = "sistem bakımda";
     public static string ProductsListed ="ürünler listelendi";
+    public static string ProductCountOfCategoryError = "Bir ategoride en fazla 10 ürün olabilir";
+    public static string ProductNameAlreadyExists = "Bu isimde zaten başka bir ürün var";
 }
