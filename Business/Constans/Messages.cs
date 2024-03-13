@@ -15,4 +15,5 @@ public static class Messages
     public static string ProductsListed ="ürünler listelendi";
     public static string ProductCountOfCategoryError = "Bir ategoride en fazla 10 ürün olabilir";
     public static string ProductNameAlreadyExists = "Bu isimde zaten başka bir ürün var";
+    public static string CategoryLimitExceded = "Kategori limiti aşıldığı için ürün eklenemiyor";
 }

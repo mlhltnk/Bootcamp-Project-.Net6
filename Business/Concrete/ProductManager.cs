@@ -20,26 +20,25 @@ namespace Business.Concrete
 {
     public class ProductManager : IProductService
     {
-        IProductDal _productDal;       //burada (entityframework,ınmemory vs) bağımlılığı yaratmamak için IproductDal yazılır
- 
+        IProductDal _productDal;                //burada (entityframework,ınmemory vs) bağımlılığı yaratmamak için IproductDal yazılır
+        ICategoryService _categoryService;      //buraya IcategoryDal enjekte edemeyiz.
 
-        public ProductManager(IProductDal productDal)
+        public ProductManager(IProductDal productDal, ICategoryService categoryService)
         {
             _productDal = productDal;
-          
+            _categoryService = categoryService;      
         }
 
 
 
-
-        [ValidationAspect(typeof(ProductValidator))]           //VALİDASYONU AOP(ASPECT-AUTOFAC) sayesinde attribute olarak buraya yazdık. metot içine yazmadık
+        [ValidationAspect(typeof(ProductValidator))]                                             //VALİDASYONU AOP(ASPECT-AUTOFAC) sayesinde attribute olarak buraya yazdık. metot içine yazmadık
         public IResult Add(Product product)
         {//buraya iş kodları ve validasyon kodları yazılır. ürünü eklemeden önce kurallar varsa buraya yazarız
 
             IResult result = BusinessRules.Run(CheckIfProductNameExist(product.ProductName), 
-                CheckIfProductCountOfCategoryCorrect(product.CategoryID));      //bunlar iş kuralları, params sayesinde aynı satırda yazabildik
+                CheckIfProductCountOfCategoryCorrect(product.CategoryID), CheckIfCategoryLimitExceded());                        //bunlar iş kuralları; params sayesinde aynı satırda yazabildik
 
-            if(result != null) //kurala uymayan bir durum oluşmuşsa
+            if(result != null)                                                                    //kurallara uymayan bir durum oluşmuşsa
             {
                 return result;
             }
@@ -50,7 +49,6 @@ namespace Business.Concrete
             //(true,ürün eklendi) bu kısmın construtor'ı Result.cs de oluşturuldu   
 
         }
-
 
 
 
@@ -93,6 +91,7 @@ namespace Business.Concrete
             return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetProductDetails());
         }
 
+
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Update(Product product)
         {
@@ -106,10 +105,9 @@ namespace Business.Concrete
         }
 
 
-
+        //BİRDEN ÇOK YERDE KULLANILAN İŞ KURALLARI İÇİN ALLTAKİ ŞEKİLDE AYRI METOTLAR OLUŞTURULUP ÜSTTE ÇAĞIRILIR.
 
         //bir kategoride en fazla 10 ürün olabilir iş kuralı
-        //BİRDEN ÇOK YERDE KULLANILAN BİR İŞ KURALI OLDUĞU İÇİN BU ŞEKİLDE AYRI BİR METOT YAPTIK
         private IResult CheckIfProductCountOfCategoryCorrect(int categoryid)   //kategorideki ürün sayısının kurallara uygunluğunu doğrula
         {
             //select count(*) from products where categoryıd=1 'in LINQ hali aşağıdaki
@@ -126,7 +124,6 @@ namespace Business.Concrete
         //Aynı isimde ürün eklenemesin iş kuralı
         private IResult CheckIfProductNameExist(string productName)   
         {
-
             var result = _productDal.GetAll(p => p.ProductName == productName).Any();  //Any-->var mı? demektir. Yani bu şarta uyan data var mı demektir.        
             if (result==true)
             {
@@ -136,9 +133,20 @@ namespace Business.Concrete
         }
 
 
+        //Eğer mevcut kategori sayısı 15'i geçtiyse sisteme yeni ürün eklenemesin
+        private IResult CheckIfCategoryLimitExceded()              //bu kural tek başına bir servis ise categorymanagerda'da yazılabilirdi.
+                                                                   //burada productservice categoryserviceden sadece Data verisi aldığı için buraya yazdık. categorymanagera'da yazılabilir.
+        {
+            var result = _categoryService.GetAll();
+            if (result.Data.Count > 15)
+            {
+                return new ErrorResult(Messages.CategoryLimitExceded);
+            }
+            return new SuccessResult();
+        }
+
 
         //geri kalan CRUD operasyonlarını yaz.
     }
-
    
 }

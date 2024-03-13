@@ -21,3 +21,4 @@ C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\Core\obj\Debug\net6.0\Co
 C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\Core\obj\Debug\net6.0\refint\Core.dll
 C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\Core\obj\Debug\net6.0\Core.pdb
 C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\Core\obj\Debug\net6.0\ref\Core.dll
+C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\Core\obj\Debug\net6.0\Core.sourcelink.json

@@ -21,8 +21,9 @@ public class AutofacBusinessModule:Module
 
         builder.RegisterType<ProductManager>().As<IProductService>().SingleInstance();      //Birisi constructorda Iproductservice isterse ona arka planda productmanager oluştur ve onu ver.
         builder.RegisterType<EfProductDal>().As<IProductDal>().SingleInstance();            //Birisi constructorda IproductDal isterse ona arka planda EfProductDal oluştur ve onu ver.
-      
 
+        builder.RegisterType<CategoryManager>().As<ICategoryService>().SingleInstance();
+        builder.RegisterType<EfCategoryDal>().As<ICategoryDal>().SingleInstance();
 
 
         //-------------alttaki kısım sayesinde  Autofac aracılığı ile interceptor özelliği de eklemiş oluyoruz.

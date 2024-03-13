@@ -15,7 +15,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//Autofac,Ninject,Castlewindsor,strutureMap,Dryinject -->.netcore öncesinde IOC Container altyapýsý saðlamak için kullanýlýyordu. Autofac bize AOP imkaný sunuyor.
+//Autofac,Ninject,Castlewindsor,strutureMap,Dryinject -->.netcore öncesinde burasý IOC Container altyapýsý saðlamak için kullanýlýyordu. Autofac bize AOP imkaný sunuyor. Bu sebeple burayý Autofac'e taþýdýk
 
 //builder.Services.AddSingleton<IProductService, ProductManager>();          //Bana arkaplanda bir referans oluþtur.(IOC Container)  //Birisi constructorda Iproductservice isterse ona arka planda productmanager oluþtur ve onu ver.
 //builder.Services.AddSingleton<IProductDal, EfProductDal>();               //Birisi IproductDal isterse ona Efporductdal'ý ver

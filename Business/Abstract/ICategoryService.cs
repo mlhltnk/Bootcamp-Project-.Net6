@@ -1,4 +1,5 @@
-﻿using Entitities.Concrete;
+﻿using Core.Utilities.Results;
+using Entitities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,8 +11,8 @@ namespace Business.Abstract
     public interface ICategoryService
     //kategori ile ilgili dış dünyaya neyi servis etmek istiyorsak o operasyonları yazıyoruz.
     {
-        List<Category> GetAll();
+        IDataResult<List<Category>> GetAll();
 
-        Category GetById(int categoryId);
+        IDataResult<Category> GetById(int categoryId);
     }
 }
