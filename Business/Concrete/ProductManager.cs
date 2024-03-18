@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.Constans;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
@@ -29,9 +30,9 @@ namespace Business.Concrete
             _categoryService = categoryService;      
         }
 
-
-
-        [ValidationAspect(typeof(ProductValidator))]                                             //VALİDASYONU AOP(ASPECT-AUTOFAC) sayesinde attribute olarak buraya yazdık. metot içine yazmadık
+        
+        [SecuredOperation("product.add,admin")]              //claim'i attribute ile ekleme işlemi
+        [ValidationAspect(typeof(ProductValidator))]        //VALİDASYONU AOP(ASPECT-AUTOFAC) sayesinde attribute olarak buraya yazdık. metot içine yazmadık
         public IResult Add(Product product)
         {//buraya iş kodları ve validasyon kodları yazılır. ürünü eklemeden önce kurallar varsa buraya yazarız
 

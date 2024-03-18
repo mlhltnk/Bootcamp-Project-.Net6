@@ -8,12 +8,12 @@ namespace Core.Utilities.Results
 {
     public class ErrorResult:Result
     {
-        public ErrorResult(string message) : base(false, message)   //base'e(resulta) hem true hem mesaj yollama işlemi
+        public ErrorResult(string message) : base(false, message)   //hem false hem mesaj yollama işlemi
         {
 
         }
 
-        public ErrorResult() : base(false)   //base'e(resulta) true yollama işlemi
+        public ErrorResult() : base(false)   //mesajsız false yollama işlemi
         {
 
         }

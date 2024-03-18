@@ -8,12 +8,12 @@ namespace Core.Utilities.Results
 {
     public class SuccessResult:Result
     {
-        public SuccessResult(string message) : base(true, message)   //base'e(resulta) hem true hem mesaj yollama işlemi
+        public SuccessResult(string message) : base(true, message)   // hem true hem mesaj yollama işlemi
         {
 
         }
 
-        public SuccessResult():base(true)   //base'e(resulta) true yollama işlemi
+        public SuccessResult():base(true)   //mesajsız true yollama işlemi
         {
 
         }

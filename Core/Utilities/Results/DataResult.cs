@@ -8,12 +8,12 @@ namespace Core.Utilities.Results
 {
     public class DataResult<T> : Result, IDataResult<T>
     {
-        public DataResult(T data,bool success,string message):base(success,message)
+        public DataResult(T data,bool success,string message):base(success,message)   //veri,true ve mesaj dönderir
         {
             Data = data;
         }
 
-        public DataResult(T data, bool success):base(success)
+        public DataResult(T data, bool success):base(success)   //veri ve true döner
         {
             Data = data;
         }

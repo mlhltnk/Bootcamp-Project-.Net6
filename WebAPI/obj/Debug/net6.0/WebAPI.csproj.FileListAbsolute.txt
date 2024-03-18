@@ -91,3 +91,6 @@ C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\WebAPI\bin\Debug\net6.0\
 C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\WebAPI\bin\Debug\net6.0\ru\FluentValidation.resources.dll
 C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\WebAPI\bin\Debug\net6.0\sv\FluentValidation.resources.dll
 C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\WebAPI\bin\Debug\net6.0\zh-CN\FluentValidation.resources.dll
+C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Melih\Desktop\edemirog2021.Net6\MyFinalProject\WebAPI\obj\Debug\net6.0\WebAPI.sourcelink.json
