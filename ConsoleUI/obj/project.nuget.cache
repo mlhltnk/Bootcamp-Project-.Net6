@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "whsFwpT6nROeoW8T2ShbnLaOsJ0WBvxDqeLhegnxMlqWwpEHUiCjRaDkXR5frg9YxW0SdwPBa6edz0YihyUP9g==",
+  "dgSpecHash": "X9yxQMewhOnJby0NJ2c+go8w8e+r8DOTnZ8dnpMS1F6HVIN3IbkDIdl3xPV0E26R6SOaxqlSG3TgIAUiCAqFZA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\ConsoleUI\\ConsoleUI.csproj",
   "expectedPackageFiles": [
@@ -10,8 +10,8 @@
     "C:\\Users\\Melih\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\fluentvalidation\\6.4.1\\fluentvalidation.6.4.1.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.24\\microsoft.aspnetcore.authentication.jwtbearer.6.0.24.nupkg.sha512",
-    "C:\\Users\\Melih\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.0.2\\microsoft.aspnetcore.http.abstractions.2.0.2.nupkg.sha512",
-    "C:\\Users\\Melih\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.0.2\\microsoft.aspnetcore.http.features.2.0.2.nupkg.sha512",
+    "C:\\Users\\Melih\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Melih\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
@@ -123,7 +123,7 @@
     "C:\\Users\\Melih\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
-    "C:\\Users\\Melih\\.nuget\\packages\\system.text.encodings.web\\4.4.0\\system.text.encodings.web.4.4.0.nupkg.sha512",
+    "C:\\Users\\Melih\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",

@@ -2,6 +2,9 @@
 using Business.BusinessAspects.Autofac;
 using Business.Constans;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Performance;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Business;
@@ -31,8 +34,12 @@ namespace Business.Concrete
         }
 
         
-        [SecuredOperation("product.add,admin")]              //claim'i attribute ile ekleme işlemi
+        //[SecuredOperation("admin")]              //claim'i attribute ile ekleme işlemi
         [ValidationAspect(typeof(ProductValidator))]        //VALİDASYONU AOP(ASPECT-AUTOFAC) sayesinde attribute olarak buraya yazdık. metot içine yazmadık
+        
+        [CacheRemoveAspect("IProductService.Get")]    //IProductServicede BELLEKTE İÇİNDE GET OLAN TÜM CACHELERİ TEMİZLE
+
+        [TransactionScopeAspect]            //TRANSACTİON KONTROLÜ BU ASPECT İLE YAPILIR
         public IResult Add(Product product)
         {//buraya iş kodları ve validasyon kodları yazılır. ürünü eklemeden önce kurallar varsa buraya yazarız
 
@@ -52,13 +59,16 @@ namespace Business.Concrete
         }
 
 
-
+        [CacheAspect]   //CACHE -->key,value işlemi
+        [PerformanceAspect(5)]   //Bu metotdun çalışması 5 saniyeyi geçerse beni uyar. Bu sayede performansını tespit edebiliriz.
         public IDataResult<Product> GetById(int productId)
         {
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductID == productId));
         }
 
 
+
+        [CacheAspect]   //CACHE -->key,value işlemi
         public IDataResult<List<Product>> GetAll()
         {
             if(DateTime.Now.Hour == 21)  //sistem saati 21 ise sistem bakımda dönecektir.
@@ -94,6 +104,7 @@ namespace Business.Concrete
 
 
         [ValidationAspect(typeof(ProductValidator))]
+        [CacheRemoveAspect("IProductService.Get")]         //IProductServicede BELLEKTE İÇİNDE GET OLAN TÜM CACHELERİ TEMİZLE
         public IResult Update(Product product)
         {
             //bir kategoride en fazla 10 ürün olabilir
@@ -104,6 +115,14 @@ namespace Business.Concrete
             }
             throw new NotImplementedException();
         }
+
+
+
+
+
+
+
+
 
 
         //BİRDEN ÇOK YERDE KULLANILAN İŞ KURALLARI İÇİN ALLTAKİ ŞEKİLDE AYRI METOTLAR OLUŞTURULUP ÜSTTE ÇAĞIRILIR.
@@ -145,6 +164,8 @@ namespace Business.Concrete
             }
             return new SuccessResult();
         }
+
+       
 
 
         //geri kalan CRUD operasyonlarını yaz.

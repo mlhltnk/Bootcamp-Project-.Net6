@@ -25,6 +25,9 @@ namespace Business.Abstract
 
         IDataResult<Product> GetById(int productId);                               //Id'ye göre tek bir ürün getir
 
+
+
+
         //geri kalan CRUD operasyonlarını yaz!!!
     }
 }

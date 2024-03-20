@@ -47,9 +47,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddDependecyResolvers(new ICoreModule[]             //COREMODULE; istediðimiz kadar ekleyebilmek için yazdýk. CoreModule gibi istediðimiz kadar modul oluþturup buraya ekleyebiliriz.
 {
     new CoreModule()
-});      
+});
 
 //-------JWT ÝÇÝN YAPILAN TANIMLAMALAR SON------
+
+
 
 
 
@@ -82,15 +84,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.MapControllers();
+
+
 app.UseHttpsRedirection();
 
-
+app.UseRouting();
 
 app.UseAuthentication();            //JWT ÝÇÝN TANIMLANDI
 
 app.UseAuthorization();
-
-app.MapControllers();
 
 
 

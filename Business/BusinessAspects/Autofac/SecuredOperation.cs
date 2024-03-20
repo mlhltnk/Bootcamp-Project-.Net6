@@ -29,7 +29,7 @@ namespace Business.BusinessAspects.Autofac
 
         protected override void OnBefore(IInvocation invocation)
         {
-            var roleClaims = _httpContextAccessor.HttpContext.User.ClaimRoles();
+            var roleClaims = _httpContextAccessor.HttpContext.User.ClaimRoles();       //BURADA PATLIYOR!
             foreach (var role in _roles)
             {
                 if (roleClaims.Contains(role))

@@ -1,8 +1,11 @@
-﻿using Core.Utilities.IOC;
+﻿using Core.CrossCuttingConcerns.Caching;
+using Core.CrossCuttingConcerns.Caching.Microsoft;
+using Core.Utilities.IOC;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,12 +14,23 @@ namespace Core.DependecyResolvers
 {
     public class CoreModule : ICoreModule
     {
-        public void Load(IServiceCollection serviceCollection)
+        public void Load(IServiceCollection services)
         {
-            serviceCollection.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+          
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //biri senden IHttpContextAccessor isterse ona HttpContextAccessor ver
             //HttpContextAccessor; her yapılan istekle ilgili başlangıçtan bitişe kadar kullanıcının isteğinin takip edilmesini yapar
             //TÜM PROJELERİNDE BU İNJECTİONU YAPACAĞIZ BU SEBEPLE BURAYA YAZDIK
+
+
+            services.AddMemoryCache();                         //Memeorycachemanager.csdeki _memorycache tanımının karşılığına denk gelir.  //microsoftun hazırladığı injection
+
+
+            services.AddSingleton<ICacheManager, MemoryCacheManager>();
+
+
+            services.AddSingleton<Stopwatch>();           //stopwatch implemantasyonu yaptık
         }
     }
 }

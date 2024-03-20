@@ -15,7 +15,7 @@ namespace Core.Utilities.Security.JWT
 {
     public class JwtHelper : ITokenHelper
     {
-        public IConfiguration Configuration { get; }                        //Iconfiguration; appsetting.json'u okumamızı sağlar
+        public IConfiguration Configuration { get; }
         private TokenOptions _tokenOptions;
         private DateTime _accessTokenExpiration;
         public JwtHelper(IConfiguration configuration)
@@ -24,7 +24,6 @@ namespace Core.Utilities.Security.JWT
             _tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
 
         }
-
         public AccessToken CreateToken(User user, List<OperationClaim> operationClaims)
         {
             _accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOptions.AccessTokenExpiration);
@@ -42,7 +41,6 @@ namespace Core.Utilities.Security.JWT
 
         }
 
-
         public JwtSecurityToken CreateJwtSecurityToken(TokenOptions tokenOptions, User user,
             SigningCredentials signingCredentials, List<OperationClaim> operationClaims)
         {
@@ -57,11 +55,10 @@ namespace Core.Utilities.Security.JWT
             return jwt;
         }
 
-
         private IEnumerable<Claim> SetClaims(User user, List<OperationClaim> operationClaims)
         {
             var claims = new List<Claim>();
-            claims.AddNameIdentifier(user.Id.ToString());                   //bu tanımlamaları ClaimExtensions.cs sayesinde yazdık.(extension metot)
+            claims.AddNameIdentifier(user.Id.ToString());
             claims.AddEmail(user.Email);
             claims.AddName($"{user.FirstName} {user.LastName}");
             claims.AddRoles(operationClaims.Select(c => c.Name).ToArray());
