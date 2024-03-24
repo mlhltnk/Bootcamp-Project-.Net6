@@ -14,6 +14,8 @@ public class EfEntityRepositoryBase<TEntity,TContext>:IEntityRepository<TEntity>
     where TEntity : class, IEntity, new()
     where TContext : DbContext,new()
 {
+    //ALTTAKİ İŞLEMLER ENTİTYFRAMEWORK ADD,REMOVE VB METOTLARI İLE DE YAPILIYOR ANCAK BU ŞEKİLDE YAPMAYI TERCİH ETMİŞİZ. BLOGMVCDE ENTİTYFRAMEWORK KULLANARAK YAPTIK.
+
 
     public void Add(TEntity entity)
     {

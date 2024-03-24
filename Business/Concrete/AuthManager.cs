@@ -29,7 +29,8 @@ namespace Business.Concrete
         {
             byte[] passwordHash, passwordSalt;
             HashingHelper.CreatePasswordHash(password, out passwordHash, out passwordSalt);
-            var user = new User
+
+            User user = new User       //ENTİTY'İ(USERI) BURAYA ÇEKTİK
             {
                 Email = userForRegisterDto.Email,
                 FirstName = userForRegisterDto.FirstName,
