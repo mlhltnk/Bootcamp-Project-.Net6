@@ -14,13 +14,12 @@ namespace Core.CrossCuttingConcerns.Validation
     {
         public static void Validate(IValidator validator,object entity)
         {
-            //Bir tane Ivalidator verdik yani PRODUCTVALİDATOR, Ivvalidator fluentvalidation classıdır. yani kurallarımızın olduğu class
-            //Bir tane de entity yani PRODUCT verdik. Yani doğrulacak class
+            
 
             
-            var context = new ValidationContext<object>(entity);          //Ivalidatörün Validate metodunu kullanarak kontrol ediyoruz. 
+            var context = new ValidationContext<object>(entity);           
             var result = validator.Validate(context);
-            if (!result.IsValid)                                          //Valid değilse altta errors fırlatıyoruz.,sonuç geçerli değilse hata fırlat
+            if (!result.IsValid)                                         
             {
                 throw new ValidationException(result.Errors);
             }

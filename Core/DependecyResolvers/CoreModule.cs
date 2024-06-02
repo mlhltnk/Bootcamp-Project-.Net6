@@ -19,18 +19,16 @@ namespace Core.DependecyResolvers
           
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            //biri senden IHttpContextAccessor isterse ona HttpContextAccessor ver
-            //HttpContextAccessor; her yapılan istekle ilgili başlangıçtan bitişe kadar kullanıcının isteğinin takip edilmesini yapar
-            //TÜM PROJELERİNDE BU İNJECTİONU YAPACAĞIZ BU SEBEPLE BURAYA YAZDIK
+           
 
 
-            services.AddMemoryCache();                         //Memeorycachemanager.csdeki _memorycache tanımının karşılığına denk gelir.  //microsoftun hazırladığı injection
+            services.AddMemoryCache();                        
 
 
             services.AddSingleton<ICacheManager, MemoryCacheManager>();
 
 
-            services.AddSingleton<Stopwatch>();           //stopwatch implemantasyonu yaptık
+            services.AddSingleton<Stopwatch>();          
         }
     }
 }

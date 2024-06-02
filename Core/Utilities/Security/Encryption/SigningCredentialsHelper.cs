@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Core.Utilities.Security.Encryption
 {
-    public class SigningCredentialsHelper  //JWT sistemini yönetebilmen için anahtarın-->securitykey; şifreleme algoritman-->HmacSha512Signature şeklindedir metodu
+    public class SigningCredentialsHelper  
     {
-        public static SigningCredentials CreateSigningCredentials(SecurityKey securityKey)              //JWT'ların oluşturulabilmesi için gerekli Credentails kayıtlarıdır.
+        public static SigningCredentials CreateSigningCredentials(SecurityKey securityKey)              
         {
             return new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
         }

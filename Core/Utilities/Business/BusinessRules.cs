@@ -9,17 +9,17 @@ namespace Core.Utilities.Business;
 
 public class BusinessRules   //BURASI İŞ MOTORU
 {
-    public static IResult Run(params IResult[] logics)  //siz params verdiğiniz zaman run içine istediğin kadar IResult TÜRÜNDE istediğimiz kadar PARAMETRE verebiliyosun (logics=iş kuralı demek)
-    {                                                   //params kullandığımız zaman params tipinde istediğimiz kadar parametreyi managerda geçebiliriz.
+    public static IResult Run(params IResult[] logics)  
+    {                                                   
 
-        foreach (var logic in logics)       //bütün logic(iş kuralılarını) gez
+        foreach (var logic in logics)       
         {
-            if (!logic.Success)             //kurala uymayan varsa
+            if (!logic.Success)             
             {
-                return logic;                //error result döndürecek
-                                             //parametre ile gönderdiğimiz iş kurallarından başarısız olanlarını(logic hatalarını) businessa bildiriyoruz
+                return logic;                
+                                             
             }      
         }
-        return null;                         //başarılı ise hiçbişe göndermesine gerek yok
+        return null;                         
     }
 }

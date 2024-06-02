@@ -11,23 +11,23 @@ namespace Business.Abstract
 {
     public interface IProductService
     {
-        IDataResult<List<Product>> GetAll();                    //IDataResult;Hem işlem sanucu hem mesajı hemde döndüreceği şeyi(List<product>) içerir    //IResult;işlem sanucu ve hem mesajı içerir
+        IDataResult<List<Product>> GetAll();                    
 
-        IDataResult<List<Product>> GetAllByCategoryId(int id);                      //kategoriId'ye göre productları getir
+        IDataResult<List<Product>> GetAllByCategoryId(int id);                    
 
         IDataResult<List<Product>> GetByUnitPrice(decimal min, decimal max);
 
         IDataResult<List<ProductDetailDto>> GetProductDetails();
 
-        IResult Add(Product product);                                              //ürün ekleme  (bu void olduğu için bunu Iresult olarak bıraktık)
+        IResult Add(Product product);                                             
 
         IResult Update(Product product);
 
-        IDataResult<Product> GetById(int productId);                               //Id'ye göre tek bir ürün getir
+        IDataResult<Product> GetById(int productId);                             
 
 
 
 
-        //geri kalan CRUD operasyonlarını yaz!!!
+       
     }
 }

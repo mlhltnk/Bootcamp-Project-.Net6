@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
-    public class AuthManager : IAuthService   //kayıt olmak için gerekli olan operasyonu yazar
+    public class AuthManager : IAuthService   
 
     {
         private IUserService _userService;
@@ -30,7 +30,7 @@ namespace Business.Concrete
             byte[] passwordHash, passwordSalt;
             HashingHelper.CreatePasswordHash(password, out passwordHash, out passwordSalt);
 
-            User user = new User       //ENTİTY'İ(USERI) BURAYA ÇEKTİK
+            User user = new User       
             {
                 Email = userForRegisterDto.Email,
                 FirstName = userForRegisterDto.FirstName,

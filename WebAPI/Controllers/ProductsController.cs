@@ -11,9 +11,9 @@ namespace WebAPI.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        //IOC Container(Inversion of Control) --> WEPAPI'de singleton ile bunu hallettik.
+        
 
-        IProductService _productService;          //loosely coupled;gevşek bağımlılık=dependecy injection
+        IProductService _productService;          //loosely coupled
 
         public ProductsController(IProductService productService)
         {
@@ -25,14 +25,14 @@ namespace WebAPI.Controllers
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            //IProductService productService = new ProductManager(new EfProductDal());  -->Bu kısım yerine SOLID için loosely coupled yapıldı.
+            
             var result = _productService.GetAll();
             if(result.Success)
             {
-                return Ok(result);         //code:200 datayı,mesaj verir
+                return Ok(result);        
             }
 
-            return BadRequest(result);   //code:400 data ve mesaj verir
+            return BadRequest(result);   
         }
 
 

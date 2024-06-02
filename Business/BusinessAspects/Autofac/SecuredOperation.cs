@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Business.BusinessAspects.Autofac
 {
-    //JWT için(authorization için)
+    //JWT 
     public class SecuredOperation : MethodInterception
     {
         private string[] _roles;
@@ -29,7 +29,7 @@ namespace Business.BusinessAspects.Autofac
 
         protected override void OnBefore(IInvocation invocation)
         {
-            var roleClaims = _httpContextAccessor.HttpContext.User.ClaimRoles();       //BURADA PATLIYOR!
+            var roleClaims = _httpContextAccessor.HttpContext.User.ClaimRoles();      
             foreach (var role in _roles)
             {
                 if (roleClaims.Contains(role))

@@ -7520,11 +7520,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\Business.csproj",
+      "projectUniqueName": "C:\\Users\\Melih\\Desktop\\Github\\edemirog2021.Net6\\C# Bootcamp Project\\Business\\Business.csproj",
       "projectName": "Business",
-      "projectPath": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\Business.csproj",
+      "projectPath": "C:\\Users\\Melih\\Desktop\\Github\\edemirog2021.Net6\\C# Bootcamp Project\\Business\\Business.csproj",
       "packagesPath": "C:\\Users\\Melih\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Business\\obj\\",
+      "outputPath": "C:\\Users\\Melih\\Desktop\\Github\\edemirog2021.Net6\\C# Bootcamp Project\\Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Melih\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7541,11 +7541,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\Melih\\Desktop\\Github\\edemirog2021.Net6\\C# Bootcamp Project\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\Melih\\Desktop\\Github\\edemirog2021.Net6\\C# Bootcamp Project\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Entitities\\Entitities.csproj": {
-              "projectPath": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Entitities\\Entitities.csproj"
+            "C:\\Users\\Melih\\Desktop\\Github\\edemirog2021.Net6\\C# Bootcamp Project\\Entitities\\Entitities.csproj": {
+              "projectPath": "C:\\Users\\Melih\\Desktop\\Github\\edemirog2021.Net6\\C# Bootcamp Project\\Entitities\\Entitities.csproj"
             }
           }
         }
@@ -7610,7 +7610,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   },

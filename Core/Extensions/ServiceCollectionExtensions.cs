@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace Core.Extensions
 {
-    public static class ServiceCollectionExtensions  //CORE SEVİYESİNDE EKLEYECEĞİMİZ BÜTÜN İNJECTİONLARI TEK NOKTADA TOPLADIK
-                                                    //core seviyesinde injectionları program.csye eklemek yerine burayı oluşturduk.Buraya ekleyeceğiz.
+    public static class ServiceCollectionExtensions  
+                                                    
     {
-        public static IServiceCollection AddDependecyResolvers(this IServiceCollection serviceCollection, ICoreModule[] modules)  //this yanına yazdığın Neyi genişletmek istediğin neyse odur.
+        public static IServiceCollection AddDependecyResolvers(this IServiceCollection serviceCollection, ICoreModule[] modules)  
         {
-            foreach (var module in modules)   //eklenen herbir module için module'ü yükle
+            foreach (var module in modules)   
             {
                 module.Load(serviceCollection); 
             }

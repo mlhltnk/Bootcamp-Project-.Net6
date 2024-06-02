@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Core.CrossCuttingConcerns.Caching
 {
-    public interface ICacheManager   //bütün cache metdolarını kapsar(redis,inmemory vs.)
+    public interface ICacheManager   
     {
-        T Get<T>(string key);                               //ben sana bir key vereyim sen bu keye denk gelen datayı bana dbden ver
+        T Get<T>(string key);                               
 
         object Get(string key);
-        void Add(string key, object value, int duration);   //value=cachede herşey yutabiliriz bu sebeple value,  duration:cache tutma süresi
+        void Add(string key, object value, int duration);  
 
-        bool IsAdd(string key);   //cachede var mı?
+        bool IsAdd(string key);  
 
-        void Remove(string key);    //cacheden silme
+        void Remove(string key);    
 
         void RemoveByPattern(string pattern);
     }

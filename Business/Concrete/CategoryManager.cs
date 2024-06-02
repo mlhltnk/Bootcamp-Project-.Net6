@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 namespace Business.Concrete
 {
     public class CategoryManager : ICategoryService
-       //Dış dünyaya servis etmek istediğim iş kodlarımı buraya yazıyorum
+     
     {
         ICategoryDal _categoryDal;
 
-        //categorymanager olarak veri erişim katmanına(categorydala) bağlıyım ama zayıf bağlıyım. Dependecyinjection sayesinde bunu sağlıyoruz
+      
         
         public CategoryManager(ICategoryDal categoryDal)  
         {

@@ -9,7 +9,7 @@ using System.Transactions;
 
 namespace Core.Aspects.Autofac.Transaction
 {
-    public class TransactionScopeAspect : MethodInterception            //transaction yönetimi için bu aspect var.
+    public class TransactionScopeAspect : MethodInterception            
     {
         public override void Intercept(IInvocation invocation)
         {

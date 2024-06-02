@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0YETsiFVtFRRwGzUze8+bNn4IMN/Lss6OGcyb2H7aMwbqQ7YdtEg/LGsCYAOoGkYcHF5ch7i009zB3NrV7OoWg==",
+  "dgSpecHash": "6WEPKzE87Esdw/Wdjc/N/e9zrlKI5qSLZ7eEpU8QuLWVgjt+1gAc/NIufcE2qniptKRPxMQxhfAdauyVWyHFtA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Melih\\Desktop\\edemirog2021.Net6\\MyFinalProject\\Entitities\\Entitities.csproj",
+  "projectFilePath": "C:\\Users\\Melih\\Desktop\\Github\\edemirog2021.Net6\\C# Bootcamp Project\\Entitities\\Entitities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Melih\\.nuget\\packages\\autofac\\6.5.0\\autofac.6.5.0.nupkg.sha512",
     "C:\\Users\\Melih\\.nuget\\packages\\autofac.extensions.dependencyinjection\\6.0.0\\autofac.extensions.dependencyinjection.6.0.0.nupkg.sha512",

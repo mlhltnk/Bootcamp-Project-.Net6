@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Core.Aspects.Autofac.Caching
 {
-    public class CacheRemoveAspect : MethodInterception            //CACHE'i patterne göre SİLME İŞLEMİ
+    public class CacheRemoveAspect : MethodInterception           
     {
         private string _pattern;
         private ICacheManager _cacheManager;

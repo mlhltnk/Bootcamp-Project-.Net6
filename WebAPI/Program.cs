@@ -21,7 +21,7 @@ builder.Services.AddControllers();
 
 
 
-//---JWT ÝÇÝN YAPILAN TANIMLAMALAR
+//---JWT 
 var configuration = new ConfigurationBuilder()
                .SetBasePath(Directory.GetCurrentDirectory())
                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
@@ -44,12 +44,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-builder.Services.AddDependecyResolvers(new ICoreModule[]             //COREMODULE; istediðimiz kadar ekleyebilmek için yazdýk. CoreModule gibi istediðimiz kadar modul oluþturup buraya ekleyebiliriz.
+builder.Services.AddDependecyResolvers(new ICoreModule[]             //COREMODULE
 {
     new CoreModule()
 });
 
-//-------JWT ÝÇÝN YAPILAN TANIMLAMALAR SON------
+//-------JWT 
 
 
 
@@ -61,14 +61,11 @@ builder.Services.AddSwaggerGen();
 
 
 
-//.netcore öncesinde program.cs; IOC Container altyapýsý saðlamak için kullanýlýyordu. Autofac bize AOP imkaný sunuyor. Bu sebeple alttaki kodlarý Autofac'e taþýdýk
-
-//builder.Services.AddSingleton<IProductService, ProductManager>();          //Bana arkaplanda bir referans oluþtur.(IOC Container)  //Birisi constructorda Iproductservice isterse ona arka planda productmanager oluþtur ve onu ver.
-//builder.Services.AddSingleton<IProductDal, EfProductDal>();                //Birisi IproductDal isterse ona Efporductdal'ý ver
 
 
 
-//----.net core altyapýsýnda halihazýrda varolan IOC container kullandýrmak yerine AUTOFAC kullandýrma yapýlandýrmasý-----
+
+//---AUTOFAC -----
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(builder2 => builder2.RegisterModule(new AutofacBusinessModule()));
 //-----------------
@@ -91,7 +88,7 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 
-app.UseAuthentication();            //JWT ÝÇÝN TANIMLANDI
+app.UseAuthentication();            //JWT 
 
 app.UseAuthorization();
 

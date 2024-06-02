@@ -9,8 +9,8 @@ namespace Core.Utilities.Results
     //Temel voidler için başlangıç
     public interface IResult
     {
-        bool Success { get; }           //get demek sadece okunabilir demek
-        string Message { get; }         //örn:ürün eklendiğinde kullanıcıya "ürün eklendi mesajı"
+        bool Success { get; }           
+        string Message { get; }         
 
 
     }

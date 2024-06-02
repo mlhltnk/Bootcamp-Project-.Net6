@@ -8,16 +8,15 @@ using System.Threading.Tasks;
 
 namespace Core.DataAccess
 {
-    //BU CLASS TÜM YAZILIMLARDA STANDART !!
+    
 
-    public interface IEntityRepository<T> where T : class, IEntity, new()    //generic constraint işlemi ; T'yi kısıtmalama işlemi (sadece '"class" referans tip' olabilir ve
-                                                                            //'"IEntity" Ientitity implemente eden bir nesne olabilir' ve
-                                                                            //new()  : newlenebilir olmalı 
+    public interface IEntityRepository<T> where T : class, IEntity, new()    
+                                                                            
     {
-        List<T> GetAll(Expression<Func<T,bool>> filter=null);         //hem hepsini getirebilmemizi, hemde expression sayesinde filtre ile getirebilmemizi sağlar
-                                                                      //filter=null ; filtre vermeyedebilirsin demektir
+        List<T> GetAll(Expression<Func<T,bool>> filter=null);         
+                                                                      
 
-        T Get(Expression<Func<T, bool>> filter);                      //tek getirme senaryosunda bu kullanılır
+        T Get(Expression<Func<T, bool>> filter);                     
          
         void Add(T entity);
 

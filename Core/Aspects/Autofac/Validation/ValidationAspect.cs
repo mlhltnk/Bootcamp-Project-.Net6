@@ -10,16 +10,15 @@ using System.Threading.Tasks;
 
 namespace Core.Aspects.Autofac.Validation
 {
-    //ASPECT: METODUN BAŞINDA SONUNDA HATA VERDİĞİNDE ÇALIŞACAK YAPI DEMEKTİR.!
-    //INVOCATION: METOdumuz (şuan için add metoduna yaptık) 
-    public class ValidationAspect : MethodInterception   //Aspect
+     
+    public class ValidationAspect : MethodInterception   
     {
         private Type _validatorType;
 
         public ValidationAspect(Type validatorType)
         {
             //defensive code
-            if (!typeof(IValidator).IsAssignableFrom(validatorType))                 //gönderdiğin validatör type bir Ivalidator mu onu sorguluyor değilse hata düşürüyüor
+            if (!typeof(IValidator).IsAssignableFrom(validatorType))                 
             {
                 throw new System.Exception("Bu bir doğrulama sınıfı değil");
             }
@@ -29,14 +28,14 @@ namespace Core.Aspects.Autofac.Validation
 
 
 
-        protected override void OnBefore(IInvocation invocation)                        //sen sadece Onbefore'u ez.yani (metoddan önce çalış)methodInterception içindeki sadece Onbefore çalışacak.
-        {                                                                               //başında olma sebebi buradaki işimiz validation olduğu için doğrulama metodun haşında yapışlır bu sebeple onbeforu'u ezdik
+        protected override void OnBefore(IInvocation invocation)                        
+        {                                                                               
             var validator = (IValidator)Activator.CreateInstance(_validatorType);
-            var entityType = _validatorType.BaseType.GetGenericArguments()[0];          //productın tipini yakalama
+            var entityType = _validatorType.BaseType.GetGenericArguments()[0];          
             var entities = invocation.Arguments.Where(t => t.GetType() == entityType);
             foreach (var entity in entities)
             {
-                ValidationTool.Validate(validator, entity);                 //validationTool.cs'yi kullanarak validate ettik.
+                ValidationTool.Validate(validator, entity);                 
             }
         }
     }

@@ -4,13 +4,12 @@ namespace Core.Utilities.Interceptors
 {
     public abstract class MethodInterception : MethodInterceptionBaseAttribute
     {
-        //INTERCEPTOR: ARAYA GİREN DEMEKTİR.
-        //invocation(business metotları(add,update,delete vs)); iş tarafındaki metodumuz(Bizim şuan için örneğimizde add metodu için işlem yaptık)
-        protected virtual void OnBefore(IInvocation invocation) { }    //metodun öncesinde çalış
-        protected virtual void OnAfter(IInvocation invocation) { }    //metodun sonrasında çalış (ŞUAN ÇALIŞMIYOR)
-        protected virtual void OnException(IInvocation invocation, System.Exception e) { }  //(ŞUAN ÇALIŞMIYOR)
-        protected virtual void OnSuccess(IInvocation invocation) { }   //(ŞUAN ÇALIŞMIYOR)
-        public override void Intercept(IInvocation invocation)  //(ŞUAN ÇALIŞMIYOR)
+        
+        protected virtual void OnBefore(IInvocation invocation) { }    
+        protected virtual void OnAfter(IInvocation invocation) { }    
+        protected virtual void OnException(IInvocation invocation, System.Exception e) { }  
+        protected virtual void OnSuccess(IInvocation invocation) { }   
+        public override void Intercept(IInvocation invocation)  
         {
             var isSuccess = true;
             OnBefore(invocation);

@@ -14,15 +14,15 @@ public class EfEntityRepositoryBase<TEntity,TContext>:IEntityRepository<TEntity>
     where TEntity : class, IEntity, new()
     where TContext : DbContext,new()
 {
-    //ALTTAKİ İŞLEMLER ENTİTYFRAMEWORK ADD,REMOVE VB METOTLARI İLE DE YAPILIYOR ANCAK BU ŞEKİLDE YAPMAYI TERCİH ETMİŞİZ. BLOGMVCDE ENTİTYFRAMEWORK KULLANARAK YAPTIK.
+   
 
 
     public void Add(TEntity entity)
     {
-        using (TContext context = new TContext())    //using yazma işlemi performans için yazıldı. yazmayıp direk new'lesende çalışır. Belleği hızlıca temizlemeye yarar
+        using (TContext context = new TContext())    
         {
 
-            var addEntity = context.Entry(entity);    //referansı yakalama işlemi
+            var addEntity = context.Entry(entity);   
             addEntity.State = EntityState.Added;
             context.SaveChanges();
         }
@@ -32,16 +32,16 @@ public class EfEntityRepositoryBase<TEntity,TContext>:IEntityRepository<TEntity>
 
     public void Delete(TEntity entity)
     {
-        using (TContext context = new TContext())    //using yazma işlemi performans için yazıldı. yazmayıp direk new'lesende çalışır. Belleği hızlıca temizlemeye yarar
+        using (TContext context = new TContext())    
         {
-            var deletedEntity = context.Entry(entity);    //referansı yakalama işlemi
+            var deletedEntity = context.Entry(entity);    
             deletedEntity.State = EntityState.Deleted;
             context.SaveChanges();
         }
     }
 
 
-    public TEntity Get(Expression<Func<TEntity, bool>> filter)           //tek data getirir
+    public TEntity Get(Expression<Func<TEntity, bool>> filter)           
     {
         using (TContext context = new TContext())
         {
@@ -54,18 +54,18 @@ public class EfEntityRepositoryBase<TEntity,TContext>:IEntityRepository<TEntity>
     {
         using (TContext context = new TContext())
         {
-            return filter == null                                       //filtre null mı?
-                ? context.Set<TEntity>().ToList()                        //nullsa burası çalışır    (select * from products)
-                : context.Set<TEntity>().Where(filter).ToList();        //null değilse burası çalışır
+            return filter == null                                      
+                ? context.Set<TEntity>().ToList()                        
+                : context.Set<TEntity>().Where(filter).ToList();       
         }
     }
 
 
     public void Update(TEntity entity)
     {
-        using (TContext context = new TContext())    //using yazma işlemi performans için yazıldı. yazmayıp direk new'lesende çalışır. Belleği hızlıca temizlemeye yarar
+        using (TContext context = new TContext())   
         {
-            var updatedEntity = context.Entry(entity);    //referansı yakalama işlemi
+            var updatedEntity = context.Entry(entity);    
             updatedEntity.State = EntityState.Modified;
             context.SaveChanges();
         }

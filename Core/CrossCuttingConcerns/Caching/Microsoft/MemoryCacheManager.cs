@@ -21,7 +21,7 @@ namespace Core.CrossCuttingConcerns.Caching.Microsoft
         }
         public void Add(string key, object value, int duration)
         {
-            _memoryCache.Set(key, value, TimeSpan.FromMinutes(duration));     //durationa vereceğin değer süresince cachede kalacak
+            _memoryCache.Set(key, value, TimeSpan.FromMinutes(duration));     
         }
 
         public T Get<T>(string key)
@@ -34,9 +34,9 @@ namespace Core.CrossCuttingConcerns.Caching.Microsoft
             return _memoryCache.Get(key);
         }
 
-        public bool IsAdd(string key)                            //bellekte böyle bir cache değeri var mı?
+        public bool IsAdd(string key)                            
         {
-           return _memoryCache.TryGetValue(key, out _);           //sadece bellekde böyle bir anahtar varmı onu dönder,  our _ ; datayı döndermene gerek yok demektir
+           return _memoryCache.TryGetValue(key, out _);           
         }
 
         public void Remove(string key)
@@ -44,8 +44,8 @@ namespace Core.CrossCuttingConcerns.Caching.Microsoft
              _memoryCache.Remove(key);
         }
 
-        public void RemoveByPattern(string pattern)                  //ona verdiğimiz bir patterna göre cache silme işlemini yapacak
-                                                                    //çalışma anında bellekten silmeye yarar
+        public void RemoveByPattern(string pattern)                  
+                                                                    
         {
             var cacheEntriesCollectionDefinition = typeof(MemoryCache).GetProperty("EntriesCollection", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
             var cacheEntriesCollection = cacheEntriesCollectionDefinition.GetValue(_memoryCache) as dynamic;

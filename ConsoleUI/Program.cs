@@ -28,7 +28,7 @@ static void CategoryTest()
 
     foreach (var category in categoryManager.GetAll().Data)
     {
-        Console.WriteLine(category.CategoryName);   //categoryleri ismine göre listeleme testi
+        Console.WriteLine(category.CategoryName);  
     }
 }
 
@@ -43,7 +43,7 @@ static void ProductTest2()
     var result = productManager.GetProductDetails();
 
     if(result.Success ==true)
-    foreach (var product in result.Data)   //2 tablodan dataları join edip hem productname hemde categoryname verisini çekme testi
+    foreach (var product in result.Data)   
     {
         Console.WriteLine(product.ProductName + "/" + product.CategoryName);
     }

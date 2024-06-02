@@ -9,16 +9,13 @@ namespace Core.Utilities.Results
     public class Result : IResult
     {
       
-        public Result(bool success, string message): this(success)   //this(success); Result'ın(this demek classın kendisi demektir) tek parametreli olan construtoruna successi yolla
-                                                                     //bu sayede hem success hem message istenirse bu ve alttaki construtor aynı anda çalışır.  
-                                                                     //bu constructor sayesinde programcının başarı dönüşümlerini(örnek: return new Result(true,"ürün eklendi");) 
-                                                                     //standart hale getirdik.Bizim dizaynımız dışına çıkamasın diye.                                                              
+        public Result(bool success, string message): this(success)                                                                
         {
-            Message = message;                                        //Aşağıdaki message değerini Message'a ata.      
+            Message = message;                                              
         }
 
 
-        public Result(bool success)                             //Mesaj boşsa bu constructor çalışır ikiside doluysa üstteki çalışır buna OVERLOADİNG deniyor.                                            
+        public Result(bool success)                                                                        
         {
                                                 
             Success = success;
@@ -28,6 +25,6 @@ namespace Core.Utilities.Results
 
         public bool Success { get; }
 
-        public string Message { get; }                      //normalde bu bir getterdır, set edilemez. Ancak sadece construtor ile getterlar set edilebilir.Bu sebeple en üst satırda construtor oluşturduk
+        public string Message { get; }                     
     }
 }

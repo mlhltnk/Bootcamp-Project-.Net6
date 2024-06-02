@@ -19,10 +19,7 @@ namespace DataAccess.Concrete.EntityFramework
         {
             using (NorthwindContext context = new NorthwindContext())
             {
-                //contexteki; ürünleri ve kategorileri join et. ürüne p,categoriye c dedik. pdeki CategoryId ile c deki kategori eşitse onları join et.
-                //hangi kolonları istiyorsun? sonucu ProductDetailDto kolonlarına uydurarak ver
-                //ProductId'yi p'deki ProductId'den al, Productname'i p'deki ProductName'den al ve diğerleri..)
-                //return Iquearable olarak döngü olarak döndüğü için return.result.Tolist(); şeklinde yazılır.
+                
 
                 var result = from p in context.Products
                              join c in context.Categories

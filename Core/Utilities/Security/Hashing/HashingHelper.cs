@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace Core.Utilities.Security.Hashing
 {
-    public class HashingHelper    //Hash oluşturmaya ve onu doğrulamaya yarar
+    public class HashingHelper    
     {
-        public static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)   //biz password vereceğiz bize paswwordün hash ve saltını oluşturacak.
+        public static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)   
         {
-            using(var hmac = new System.Security.Cryptography.HMACSHA512())             //SHA512 algoritmasını kullanarak password hash ve salt oluşturacak
+            using(var hmac = new System.Security.Cryptography.HMACSHA512())            
             {
-                passwordSalt = hmac.Key;                                                //salt değeri olarak buradaki algoritmanın Key değerini kullanıyoruz.Her kullanıcı için farklı değer oluşturur.
-                passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));    //password değerinin byte karşılığını verdik.(strign değerin byte karşılığı bu şekilde veriliyor)
+                passwordSalt = hmac.Key;                                                
+                passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));    
             }
         }
 
 
-        public static bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)   //PasswordHashini doğrulama yapan kısım(sisteme tekrardan girilirken bi<im dbdeki hash ve salt ile eşleşip eşleşmediğini verilen yer)
+        public static bool VerifyPasswordHash(string password, byte[] passwordHash, byte[] passwordSalt)   
         {
             using (var hmac = new System.Security.Cryptography.HMACSHA512(passwordSalt))
             {

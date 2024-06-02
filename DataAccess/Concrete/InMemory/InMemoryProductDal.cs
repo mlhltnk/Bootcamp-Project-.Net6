@@ -12,9 +12,9 @@ namespace DataAccess.Concrete.InMemory
 {
     public class InMemoryProductDal : IProductDal
     {
-        List<Product> _products;                        //veri tabanım bu, bir liste olarak simule ettim
+        List<Product> _products;                        
 
-        public InMemoryProductDal()                     //ramde çalıştırdığımız için ürünleri simüle edip, oluşturdum
+        public InMemoryProductDal()                     
         {
             _products = new List<Product>()
             {
@@ -38,8 +38,7 @@ namespace DataAccess.Concrete.InMemory
 
         public void Delete(Product product)
         {
-             Product producttodelete = _products.SingleOrDefault(p=>p.ProductID==product.ProductID);   //her p için p.productid'si benim gönderdiğim productid'ye eşit olanı getir
-                                                                                                     //Firstordefult ve singleordefault aynıdır(amaç tek eleman getirmesini sağlamak)
+             Product producttodelete = _products.SingleOrDefault(p=>p.ProductID==product.ProductID);   
             _products.Remove(producttodelete);
         }
 
@@ -66,8 +65,7 @@ namespace DataAccess.Concrete.InMemory
 
         public List<Product> GetAllByCategory(int categoryId)
         {
-           return _products.Where(p => p.CategoryID == categoryId).ToList();   //where; içindeki koşula uyanlarla ilgili bir liste yapar
-                                                                               //categoriid'ye göre listeleme yapar
+           return _products.Where(p => p.CategoryID == categoryId).ToList();  
         }
 
         public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)

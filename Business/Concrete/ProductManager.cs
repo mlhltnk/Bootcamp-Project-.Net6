@@ -24,8 +24,8 @@ namespace Business.Concrete
 {
     public class ProductManager : IProductService
     {
-        IProductDal _productDal;                //burada (entityframework,ınmemory vs) bağımlılığı yaratmamak için IproductDal yazılır
-        ICategoryService _categoryService;      //buraya IcategoryDal enjekte edemeyiz.
+        IProductDal _productDal;                
+        ICategoryService _categoryService;      
 
         public ProductManager(IProductDal productDal, ICategoryService categoryService)
         {
@@ -34,33 +34,32 @@ namespace Business.Concrete
         }
 
         
-        //[SecuredOperation("admin")]              //claim'i attribute ile ekleme işlemi
-        [ValidationAspect(typeof(ProductValidator))]        //VALİDASYONU AOP(ASPECT-AUTOFAC) sayesinde attribute olarak buraya yazdık. metot içine yazmadık
+        //[SecuredOperation("admin")]              
+        [ValidationAspect(typeof(ProductValidator))]      
         
-        [CacheRemoveAspect("IProductService.Get")]    //IProductServicede BELLEKTE İÇİNDE GET OLAN TÜM CACHELERİ TEMİZLE
+        [CacheRemoveAspect("IProductService.Get")]   
 
-        [TransactionScopeAspect]            //TRANSACTİON KONTROLÜ BU ASPECT İLE YAPILIR
+        [TransactionScopeAspect]            
         public IResult Add(Product product)
-        {//buraya iş kodları ve validasyon kodları yazılır. ürünü eklemeden önce kurallar varsa buraya yazarız
+        {
 
             IResult result = BusinessRules.Run(CheckIfProductNameExist(product.ProductName), 
-                CheckIfProductCountOfCategoryCorrect(product.CategoryID), CheckIfCategoryLimitExceded());                        //bunlar iş kuralları; params sayesinde aynı satırda yazabildik
+                CheckIfProductCountOfCategoryCorrect(product.CategoryID), CheckIfCategoryLimitExceded());                       
 
-            if(result != null)                                                                    //kurallara uymayan bir durum oluşmuşsa
+            if(result != null)                                                                    
             {
                 return result;
             }
             _productDal.Add(product);
 
             return new SuccessResult(Messages.ProductAdded);
-            //return new Result(true,"ürün eklendi");   //işlemin sonucu true ve ekrana ürün eklendi yazdırmak için;
-            //(true,ürün eklendi) bu kısmın construtor'ı Result.cs de oluşturuldu   
+               
 
         }
 
 
-        [CacheAspect]   //CACHE -->key,value işlemi
-        [PerformanceAspect(5)]   //Bu metotdun çalışması 5 saniyeyi geçerse beni uyar. Bu sayede performansını tespit edebiliriz.
+        [CacheAspect]   //CACHE 
+        [PerformanceAspect(5)]  
         public IDataResult<Product> GetById(int productId)
         {
             return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductID == productId));
@@ -68,17 +67,16 @@ namespace Business.Concrete
 
 
 
-        [CacheAspect]   //CACHE -->key,value işlemi
+        [CacheAspect]   //CACHE 
         public IDataResult<List<Product>> GetAll()
         {
-            if(DateTime.Now.Hour == 21)  //sistem saati 21 ise sistem bakımda dönecektir.
+            if(DateTime.Now.Hour == 21)  
             {
                 return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
             }
 
             return new SuccessDataResult<List<Product>>(_productDal.GetAll(),Messages.ProductsListed);
-            //DataResult döndürüyorum. çalıştığım tip: List<product>
-            //_productDal.GetAll(); döndürdüğüm data.  true;işlem sonucum , mesaj; bilgilendirme mesajı
+            
         }
 
 
@@ -92,7 +90,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Product>> GetByUnitPrice(decimal min, decimal max)
         {
-            return new SuccessDataResult<List<Product>>(_productDal.GetAll(p => p.UnitPrice >= min && p.UnitPrice <= max));       //belirtilen 2 fiyat aralığında olan datayı getirecektir.
+            return new SuccessDataResult<List<Product>>(_productDal.GetAll(p => p.UnitPrice >= min && p.UnitPrice <= max));     
         }
 
 
@@ -104,11 +102,11 @@ namespace Business.Concrete
 
 
         [ValidationAspect(typeof(ProductValidator))]
-        [CacheRemoveAspect("IProductService.Get")]         //IProductServicede BELLEKTE İÇİNDE GET OLAN TÜM CACHELERİ TEMİZLE
+        [CacheRemoveAspect("IProductService.Get")]         
         public IResult Update(Product product)
         {
             //bir kategoride en fazla 10 ürün olabilir
-            var result = _productDal.GetAll(p => p.CategoryID == product.CategoryID);           //kategorideki ürünleri verir
+            var result = _productDal.GetAll(p => p.CategoryID == product.CategoryID);          
             if (result.Count >= 10)
             {
                 return new ErrorResult(Messages.ProductCountOfCategoryError);
@@ -125,13 +123,11 @@ namespace Business.Concrete
 
 
 
-        //BİRDEN ÇOK YERDE KULLANILAN İŞ KURALLARI İÇİN ALLTAKİ ŞEKİLDE AYRI METOTLAR OLUŞTURULUP ÜSTTE ÇAĞIRILIR.
-
-        //bir kategoride en fazla 10 ürün olabilir iş kuralı
-        private IResult CheckIfProductCountOfCategoryCorrect(int categoryid)   //kategorideki ürün sayısının kurallara uygunluğunu doğrula
+       
+        private IResult CheckIfProductCountOfCategoryCorrect(int categoryid)   
         {
-            //select count(*) from products where categoryıd=1 'in LINQ hali aşağıdaki
-            var result = _productDal.GetAll(p => p.CategoryID == categoryid);           //kategorideki ürünleri verir
+           
+            var result = _productDal.GetAll(p => p.CategoryID == categoryid);           
             if (result.Count >= 10)
             {
                 return new ErrorResult(Messages.ProductCountOfCategoryError);
@@ -141,10 +137,10 @@ namespace Business.Concrete
 
 
 
-        //Aynı isimde ürün eklenemesin iş kuralı
+        
         private IResult CheckIfProductNameExist(string productName)   
         {
-            var result = _productDal.GetAll(p => p.ProductName == productName).Any();  //Any-->var mı? demektir. Yani bu şarta uyan data var mı demektir.        
+            var result = _productDal.GetAll(p => p.ProductName == productName).Any();          
             if (result==true)
             {
                 return new ErrorResult(Messages.ProductNameAlreadyExists);
@@ -153,9 +149,9 @@ namespace Business.Concrete
         }
 
 
-        //Eğer mevcut kategori sayısı 15'i geçtiyse sisteme yeni ürün eklenemesin
-        private IResult CheckIfCategoryLimitExceded()              //bu kural tek başına bir servis ise categorymanagerda'da yazılabilirdi.
-                                                                   //burada productservice categoryserviceden sadece Data verisi aldığı için buraya yazdık. categorymanagera'da yazılabilir.
+        
+        private IResult CheckIfCategoryLimitExceded()             
+                                                                   
         {
             var result = _categoryService.GetAll();
             if (result.Data.Count > 15)
@@ -168,7 +164,7 @@ namespace Business.Concrete
        
 
 
-        //geri kalan CRUD operasyonlarını yaz.
+       
     }
    
 }
